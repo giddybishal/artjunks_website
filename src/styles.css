@@ -1,0 +1,240 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#hero_img{
+    object-fit: cover;
+    width: 100%;
+    height: 1024px;
+    display: block;  /* Eliminate the extra white strip below the image for consistency */
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#logo{
+    font-family: "Inter", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: -19px;
+    right: 30px;
+}
+
+nav{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 700px;
+}
+
+.menu{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a{
+    font-size: 1.1rem;
+    font-family: "roboto", sans-serif;
+}
+
+#login{
+    padding: 5px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#centerpiece{
+    position: absolute;
+    top: 350px;
+    left: 50px;
+    max-width: 800px;
+    margin: 0 auto 0 10px;
+    padding: 0px;
+}
+
+#whitebar{
+    display: inline-block;
+    height: 20px;
+    width: 100px;
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+#heading{
+    font-family: "roboto", sans-serif;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 0px;
+}
+
+#details{
+    font-family: "inter", sans-serif;
+    font-size: 0.9rem;
+    max-width: 600px;
+    margin: 0 auto 0 10px;
+    color: white;
+    position: relative;
+}
+
+#learnmore{
+    padding: 5px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#main_section{
+    max-width: 1200px;
+    margin: 70px auto;
+}
+
+h2{
+    font-family: "inter", sans-serif;
+    font-size: 1.7rem;
+}
+
+#news_blocks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.block{
+    border: 1px solid rgb(230,230,230);
+    border-radius: 5px;
+    width: calc((100% - 40px - 6px)/3);
+}
+
+.block_img > img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.block_text{
+    margin: 5px 15px 25px;
+    font-family: "roboto", sans-serif;
+    padding: 5px;
+}
+
+.date{
+    font-size: 0.7rem;
+    color: gray;
+}
+
+.snippet{
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.readmore{
+    color:#D9852C;
+    float: right;
+    font-size: 0.7rem;
+}
+
+@media screen and (max-width: 992px){
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        right: -26px;
+        width: 20%;
+    }
+    
+    .menu li {
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .menu li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #menu-toggle:checked + .hamburger + .menu {
+        display: flex;
+    }
+
+    #centerpiece{
+        max-width: 600px;
+    }
+
+    #details{
+        max-width: 400px;
+    }
+
+    #main_section{
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #centerpiece{
+        max-width: 500px;
+    }
+
+    #details{
+        max-width: 300px;
+    }
+
+    #main_section{
+        max-width: 600px;
+    }
+
+    .block{
+        width: calc((100% - 20px - 4px)/2);
+    }
+}
+
+@media screen and (max-width: 568px){
+    #centerpiece{
+        max-width: 400px;
+    }
+
+    #details{
+        max-width: 200px;
+    }
+
+    #main_section{
+        max-width: 400px;
+    }
+
+    #news_blocks{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .block{
+        width: 100%;
+    }
+}
